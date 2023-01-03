@@ -1,0 +1,12 @@
+{%if data%}
+
+{% for inf in info%}
+
+<a href="{% url 'individual_details' inf.id%}"><img src ="{{inf.image.url}}" width="200" height="200"></a>
+{{inf.name}}
+
+{% endfor%}
+<a href="{% url 'insert'%}"><button type="submit" class="btn btn-info">Insert</button></a>
+
+{% endif %}
+
